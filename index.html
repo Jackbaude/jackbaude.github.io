@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             width: 80%;
             margin: 20px auto;
@@ -20,78 +22,146 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #333;
+
+        /* Add a banner with background color */
+        .banner {
+            background-color: #154780;
+            /* You can also use an image: background-image: url('path/to/image.jpg'); */
+            background-image: url('https://med.umn.edu/sites/med.umn.edu/files/styles/header/public/banners/paccs-banner-eastandwestbankskyline.png?itok=-k0wRCdg');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 8px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
         }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            /* Adjust the text color to match the banner */
+            font-size: 500%;
+            margin: 0;
+            /* text-shadow: 4px 4px 4px #3d3d3d; */
+        }
+
         h2 {
             color: #555;
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
         }
+
         .section {
             margin-bottom: 20px;
         }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         li {
             margin-bottom: 10px;
         }
-          img {
-            border-radius: 75%;
-            width: 75%;
-            height: 15;
+
+        .profile-img {
+            border-radius: 50%;
+            width: 20%;
+            height: 20%;
+            float: right;
+            border: 3px solid white;
+            box-shadow: 4px 4px 4px #3d3d3d;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Jack Baude</h1>
-         <img src="https://avatars.githubusercontent.com/u/25142905?v=4" alt="Jack Baude">
-        <p>Email: <a href="mailto:baude022@umn.edu">baude022@umn.edu</a> | Github: <a href="https://github.com/JackBaude">JackBaude</a> | Phone: six-five-one-two-seven-two-eight-two-seven-one</p>
+        <!-- Banner with background color -->
+        <div class="banner">
+            <h1>Jack Baude</h1>
+            <img class="profile-img" src="https://avatars.githubusercontent.com/u/25142905?v=4" alt="Jack Baude">
+        </div>
+
+        <p>Email: <a href="mailto:baude022@umn.edu">baude022@umn.edu</a> or <a
+                href="mailto:jackbaude@gmail.com">jackbaude@gmail.com</a> </p>
+        <p> Github: <a href="https://github.com/JackBaude">JackBaude</a> 
+        Linkedin:
+        <a href="www.linkedin.com/in/jack-baude-61a0691a2">
+            Jack Baude
+        </a></p>
 
         <div class="section">
             <h2>Overview</h2>
-            <p>I am a student pursuing a B.S. in Computer Science at the University of Minnesota, seeking a role where I can contribute my passion for open source, networks, and embedded systems. I want to contribute to next-gen innovations in cloud, mobile, and security technologies, ensuring networks remain efficient and robust across all platforms.</p>
+            <p>I am a student pursuing a B.S. in Computer Science at the University of Minnesota, seeking a role where I
+                can contribute my passion for open source, networks, and embedded systems. I want to contribute to
+                next-gen innovations in cloud, mobile, and security technologies, ensuring networks remain efficient and
+                robust across all platforms.</p>
         </div>
 
         <div class="section">
             <h2>Core Competencies</h2>
             <ul>
-                <li><strong>Languages:</strong> C and C++, Rust, x86 assembler, Python, Java, Ocaml, Go, Web5 (HTML, CSS, JS)</li>
-                <li><strong>Software Development:</strong> Version control (Git), Continuous Integration/Continuous Deployment (CI/CD), Bash scripting, Debugging practices, Application profiling, Performance optimization</li>
-                <li><strong>Tools:</strong> Linux/Unix environments, Microsoft Azure, Docker, Podman, Kubernetes, Mininet, Wireshark, Netavark, Ockam</li>
-                <li><strong>Knowledgeable Concepts:</strong> Network protocols (TCP/IP, DHCP, IPv6, DNS, MACVLAN), 5G Networking, Embedded systems, SDN (Software Defined Networking), Virtualization technologies</li>
+                <li><strong>Languages:</strong> C and C++, Rust, x86 assembler, Python, Java, Ocaml, Go, Web5 (HTML,
+                    CSS, JS)</li>
+                <li><strong>Software Development:</strong> Version control (Git), Continuous Integration/Continuous
+                    Deployment (CI/CD), Bash scripting, Debugging practices, Application profiling, Performance
+                    optimization</li>
+                <li><strong>Tools:</strong> Linux/Unix environments, Microsoft Azure, Docker, Podman, Kubernetes,
+                    Mininet, Wireshark, Netavark, Ockam</li>
+                <li><strong>Knowledgeable Concepts:</strong> Network protocols (TCP/IP, DHCP, IPv6, DNS, MACVLAN), 5G
+                    Networking, Embedded systems, SDN (Software Defined Networking), Virtualization technologies</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Open Source Contributions</h2>
             <ul>
-                <li><strong>Netavark:</strong> A Rust-based network stack for containers. It is designed for Podman but also applicable for other OCI container management applications. My key contribution added macvlan functionality to Netavark and Podman, providing containers with routable IP addresses without using NAT or port mapping.</li>
-                <li><strong>Ockam:</strong> Libraries and command-line tools to orchestrate end-to-end encryption, mutual authentication, key management, credential management, and authorization policy enforcement. I contributed documentation and tests for the core library.</li>
+                <li><strong><a href="https://github.com/containers/netavark">Netavark:</a></strong> A Rust-based network
+                    stack for containers. It is designed for <a href="https://podman.io/">Podman</a> but
+                    also applicable for other OCI container management applications. My key contribution added macvlan
+                    functionality to Netavark and Podman, providing containers with routable IP addresses without using
+                    NAT or port mapping.</li>
+                <li><strong><a href="https://github.com/build-trust/ockam">Ockam</a></strong> Libraries and command-line
+                    tools to orchestrate end-to-end encryption,
+                    mutual authentication, key management, credential management, and authorization policy enforcement.
+                    I contributed documentation and tests for the core library.</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Education</h2>
-            <p><strong>University of Minnesota, Twin Cities</strong> - B.S Computer Science [Expected graduation Dec 2025]</p>
+            <p><strong>University of Minnesota, Twin Cities</strong> - B.S Computer Science [Expected graduation Dec
+                2025]</p>
             <p>GPA: 3.13</p>
         </div>
 
         <div class="section">
             <h2>Research</h2>
-            <p><strong>Networking Research Group, Zhi-Li Zhang, University of Minnesota</strong> — Research Assistant [Fall 2024 - Present]</p>
+            <p><strong><a href="https://networking.umn.edu/">Networking Research Group</a>, Zhi-Li Zhang, University of
+                    Minnesota</strong> — Research Assistant
+                [Fall 2024 - Present]</p>
             <ul>
-                <li>Testing and characterizing 5G networks using the srsRAN project and POWDER</li>
+                <li>Testing and characterizing 5G networks using the <a href="https://www.srslte.com/">srsRAN</a>
+                    project and <a href="https://powderwireless.net/news">POWDER</a></li>
                 <li>Setting up UE devices and monitoring core network performance</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Relevant Employment</h2>
-            <p><strong>University of Minnesota Information Technology</strong> — Technology Help [May 2023 - Present]</p>
+            <p><strong>University of Minnesota Information Technology</strong> — Technology Help [May 2023 - Present]
+            </p>
             <ul>
                 <li>Work through University problem ticket system</li>
                 <li>Resolve general email, chat, and phone problems</li>
@@ -102,4 +172,5 @@
         </div>
     </div>
 </body>
+
 </html>
